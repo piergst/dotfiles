@@ -1,0 +1,3 @@
+[data]
+deviceName = {{ promptStringOnce . "deviceName" "Device name (e.g. thinkpad-cachy, xps-arch, ...)" | quote }}
+hasExegol  = {{ promptBoolOnce  . "hasExegol"  "Has this device an Exegol environment?" false }}

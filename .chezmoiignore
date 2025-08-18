@@ -1,0 +1,3 @@
+{{ if not .hasExegol }}
+dot_exegol/**
+{{ end }}
