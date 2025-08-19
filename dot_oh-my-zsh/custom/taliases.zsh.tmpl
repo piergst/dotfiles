@@ -1,0 +1,14 @@
+{{ template "zsh_aliases_common" . }}
+
+{{ if .hasExegol }}
+alias e='sudo -E $(echo ~/.local/bin/exegol)'
+{{ end }}
+
+alias cm='chezmoi'
+alias j='jedha-cli'
+alias pacup='sudo pacman -Suy && yay -Suy'
+alias p='sudo pacman'
+alias paclean='sudo pacman -Rns (pacman -Qtdq)'
+alias lock='i3lock -t -i /home/pierre/Sync/documents/wallpaper/arch.png'
+
+

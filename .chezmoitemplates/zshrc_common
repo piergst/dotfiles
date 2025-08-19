@@ -1,0 +1,79 @@
+# Path to Oh My Zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+# Uncomment the following line to change how often to auto-update (in days).
+# zstyle ':omz:update' frequency 13
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+  git 
+  zsh-autosuggestions
+  zsh-completions
+  zsh-history-substring-search
+  zoxide
+  zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+
+
+
+# User configuration
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nvim'
+else
+  export EDITOR='nvim'
+fi
+
+# Avoid double compinit: only run if not already defined
+if ! (( $+functions[compinit] )); then
+  autoload -Uz compinit && compinit
+fi
+
+# ---- USER CONFIG ---- # 
+# History rules
+setopt SHARE_HISTORY          # Partage entre terminaux ouverts
+setopt HIST_IGNORE_DUPS       # Ne pas enregistrer les doublons consécutifs
+setopt HIST_IGNORE_ALL_DUPS   # Supprimer les doublons plus ancien (quand réexécuté)
+setopt HIST_REDUCE_BLANKS     # Supprime les espaces inutiles
+setopt HIST_FCNTL_LOCK        # Évite la corruption en multi-session
+
+# History search tool with fzf
+my-fzf-history() {
+  local selected
+  selected=$(
+    fc -l -n 1 | fzf --no-sort --layout=default --height=60%
+  ) || return
+  LBUFFER=$selected
+  zle redisplay
+}
+zle -N my-fzf-history
+bindkey '^[s' my-fzf-history
+
+# fzf navigation
+export FZF_DEFAULT_OPTS="--bind=alt-j:down,alt-k:up"
+
+# Prompt
+eval "$(oh-my-posh init zsh --config "$HOME/.config/zsh/my-theme.omp.json")"
+
+# Make 'ls' (aliased to eza) use eza's completion
+compdef _eza eza ls
+setopt COMPLETE_ALIASES
+
