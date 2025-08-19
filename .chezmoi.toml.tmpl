@@ -1,3 +1,5 @@
 [data]
 deviceName = {{ promptStringOnce . "deviceName" "Device name (e.g. thinkpad-cachy, xps-arch, ...)" | quote }}
 hasExegol  = {{ promptBoolOnce  . "hasExegol"  "Has this device an Exegol environment?" false }}
+wlanInterface = {{ promptStringOnce . "wlanInterface" "Wifi interface (e.g. wlan0, wl0sp2 ...)" | quote }}
+ethInterface = {{ promptStringOnce . "ethInterface" "Ethernet interface (e.g. en0, enp11s0u1u2 ...)" | quote }}
