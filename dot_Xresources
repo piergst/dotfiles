@@ -1,0 +1,134 @@
+! Xft settings ---------------------------------------------------------------
+
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+
+! Rxvt-unicode -----------------------------------------------------------------
+URxvt.font: xft:UbuntuMono Nerd Font Mono:style=Regular:pixelsize=18
+URxvt.boldFont: xft:UbuntuMono Nerd Font Mono:style=Bold:pixelsize=18
+URxvt.italicFont: xft:UbuntuMono Nerd Font Mono:style=Italic:pixelsize=18
+URxvt.boldItalicFont: xft:UbuntuMono Nerd Font Mono:style=BoldItalic:pixelsize=18
+!------------------------------------------------------------------------------
+! URXVT - Settings
+
+URxvt.saveLines: 12000
+URxvt*termName: rxvt-unicode-256color
+
+URxvt*geometry:                                 80x25
+URxvt*borderLess:                               false
+URxvt*scrollBar:                                false
+URxvt*cursorBlink:                              true
+URxvt*cursorUnderline:                          true
+!URxvt*cursorColor:                              #ffffff
+URxvt*scrollColor:                              #151515
+URxvt.underlineURLs:                            true
+URxvt*matcher.button: 1
+URxvt.url-select.launcher:                      /usr/bin/luakit
+URxvt.url-select.underline:                     true
+URxvt.url-launcher: 				google-chrome
+
+URxvt.internalBorder:  10
+!URxvt.perl-lib: .urxvt/perl
+!URxvt.perl-ext-common: default,matcher,clipboard,url-picker,font-size,notify
+
+!URxvt.keysym.C-Right: \033[1;5C
+!URxvt.keysym.C-Left: \033[1;5D
+!URxvt.keysym.C-C: perl:clipboard:copy
+!URxvt.keysym.C-V: perl:clipboard:paste
+
+!URxvt.keysym.C-f: perl:url-picker
+!URxvt.url-picker.launcher: firefox
+!URxvt.keysym.C-0xff0d: perl:url-picker
+
+
+!------------------------------------------------------------------------------
+! x-dotshare color scheme
+!
+!Transparent background : 
+!urxvt*depth: 32 
+!urxvt*background: rgba:0000/0000/0200/c800
+
+!Fake transparency and blur
+!urxvt*transparent: true
+!urxvt*shading: 10
+!urxvt*blurRadius: 65 
+*background: #192330
+*foreground: #cdcecf
+*color0:  #393b44
+*color1:  #c94f6d
+*color2:  #81b29a
+*color3:  #dbc074
+*color4:  #719cd6
+*color5:  #9d79d6
+*color6:  #63cdcf
+*color7:  #dfdfe0
+*color8:  #475072
+*color9:  #d6616b
+*color10: #58cd8b
+*color11: #ffe37e
+*color12: #84cee4
+*color13: #b8a1e3
+*color14: #59f0ff
+*color15: #f2f2f2
+
+!*.foreground:   #d7d0c7
+!*.background:   #151515
+!*.cursorColor:  #d7d0c7
+
+!! black
+!*.color0:       #101010
+!*.color8:       #404040
+
+!! red
+!*.color1:       #e84f4f
+!*.color9:       #d23d3d
+
+!! green
+!*.color2:       #b8d68c
+!*.color10:      #a0cf5d
+
+!! yellow
+!*.color3:       #e1aa5d
+!*.color11:      #f39d21
+
+!! blue
+!*.color4:       #7dc1cf
+!*.color12:      #4e9fb1
+
+!! magenta
+!*.color5:       #9b64fb
+!*.color13:      #8542ff
+
+!! cyan
+!*.color6:       #6d878d
+!*.color14:      #42717b
+
+!! white
+!*.color7:       #dddddd
+!*.color15:      #dddddd
+
+!------------------------------------------------------------------------------
+! ROFI 
+!------------------------------------------------------------------------------
+
+rofi.fullscreen: true 
+rofi.color-enabled: true
+rofi.color-window: argb:CC1A1B26,argb:CC1A1B26,#E0AF68
+rofi.color-normal: argb:02000000,#C0CAF5,argb:02000000,argb:02000000,#E0AF68
+rofi.color-active: argb:02000000,#C0CAF5,argb:02000000,argb:02000000,#C0CAF5
+rofi.color-urgent: argb:02000000,#C0CAF5,argb:02000000,argb:02000000,#C0CAF5
+
+rofi.font: System San Francisco Display 14
+rofi.eh: 1
+rofi.line-margin: 20
+rofi.separator-style: solid
+rofi.hide-scrollbar: true
+rofi.lines: 3
+rofi.width: 100
+rofi.padding: 200
+rofi.bw: 0
+rofi.show-icons: true

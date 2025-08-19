@@ -1,0 +1,9 @@
+@import ".config/rofi/themes/gruvbox-dark-hard.rasi"
+//@import "/usr/share/rofi/themes/rounded-nord-dark.rasi"
+configuration {
+
+  // Navigation ligne par ligne
+  kb-row-up:   "k,Up";
+  kb-row-down: "j,Down";
+
+}
