@@ -18,7 +18,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 sudo apt update && sudo apt install -y zoxide ripgrep xclip
 
 # eza (pb with apt install retry later)
-# cargo install eza
+/opt/my-resources/setup/install-eza.sh
 
 # Keybindings
 install -D /opt/my-resources/setup/zsh/keybindings.zsh /root/.oh-my-zsh/custom/keybindings.zsh
@@ -35,6 +35,3 @@ TARGET_ZSHRC="/root/.zshrc"
 
 cp -a "$TARGET_ZSHRC" "${TARGET_ZSHRC}.bak.exegol"
 sed -i -E 's/plugins=\(.*\)$/plugins=(zsh-syntax-highlighting zsh-completions zsh-autosuggestions tmux fzf zsh-nvm)/' "$TARGET_ZSHRC"
-
-# Shared history
-ln -s /opt/my-resources/setup/zsh/history ~/.zsh_history
