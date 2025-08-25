@@ -314,7 +314,8 @@ gaps outer 2
 exec xrandr --output HDMI-1 --mode 1920x1080 --rate 60 --scale 1x1
 #exec xrandr --auto --output HDMI-1 --mode 1920x1080 --above HDMI-2
 
-exec feh --bg-fill ~/.config/i3/wallpapers/trees.png
+# exec feh --bg-fill ~/.config/i3/wallpapers/trees.png
+exec_always --no-startup-id xwallpaper --zoom ~/.config/i3/wallpapers/trees.png
 
 exec --no-startup-id dunst
 exec --no-startup-id picom
