@@ -326,3 +326,13 @@ exec --no-startup-id redshift
 exec_always mkfifo /tmp/xobpipe && tail -f /tmp/xobpipe | xob -t 2170 & disown
 #exec ~/.i3/launch.sh
 
+# Power management 
+# Désactiver complètement l'économiseur d'écran de X11
+exec --no-startup-id xset s off
+
+# Désactiver totalement DPMS (pas de mise en veille ou extinction de l'écran)
+exec --no-startup-id xset -dpms
+
+# (Optionnel) Si au lieu de désactiver totalement, on veut éteindre l'écran
+# après un certain délai, on peut configurer DPMS :
+# exec --no-startup-id xset dpms 0 0 300   # extinction après 300s (= 5 minutes)
