@@ -14,4 +14,4 @@ alias v='nvim'
 alias t='trash'
 alias g='git'
 alias c='bat'
-
+alias logout='loginctl terminate-user pierre'
