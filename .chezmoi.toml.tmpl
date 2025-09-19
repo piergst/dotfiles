@@ -3,3 +3,6 @@ deviceName = {{ promptStringOnce . "deviceName" "Device name (e.g. thinkpad-cach
 hasExegol  = {{ promptBoolOnce  . "hasExegol"  "Has this device an Exegol environment?" false }}
 wlanInterface = {{ promptStringOnce . "wlanInterface" "Wifi interface (e.g. wlan0, wl0sp2 ...)" | quote }}
 ethInterface = {{ promptStringOnce . "ethInterface" "Ethernet interface (e.g. en0, enp11s0u1u2 ...)" | quote }}
+rightScreen = {{ promptStringOnce . "rightScreen" "Right screen name (e.g. DP-2, eDP-1 ...)" | quote }}
+centerScreen = {{ promptStringOnce . "centreScreen" "Centre screen name (e.g. DP-2, eDP-1 ...)" | quote }}
+leftScreen = {{ promptStringOnce . "leftScreen" "Left screen name (e.g. DP-2, eDP-1 ...)" | quote }}

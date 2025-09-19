@@ -194,9 +194,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ##### Screens swap
-set $mleft DP-2
-set $mcenter DP-1-1
-set $mright eDP-1
+set $mleft {{.leftScreen}}
+set $mcenter {{.centerScreen}}
+set $mright {{.rightScreen}}
 
 # workspace 1 output $mleft
 # workspace 2 output $mcenter
