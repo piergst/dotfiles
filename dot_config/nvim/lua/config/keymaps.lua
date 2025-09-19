@@ -25,3 +25,6 @@ vim.cmd([[
   cnoremap <Esc>j <Down>
   cnoremap <Esc>k <Up>
 ]])
+
+-- Remap Ctrl+Tab pour alterner avec le dernier buffer
+vim.keymap.set("n", "<C-Tab>", ":e#<CR>")
