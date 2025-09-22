@@ -9,7 +9,7 @@
   "cmake.showOptionsMovedNotification": false,
   "cmake.configureOnOpen": false,
   "[html]": {
-    "editor.defaultFormatter": "lonefy.vscode-JS-CSS-HTML-formatter"
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "pythonTestExplorer.testFramework": "pytest",
   "python.languageServer": "Jedi",
@@ -59,7 +59,7 @@
   ],
   "explorer.confirmDelete": false,
   "search.seedWithNearestWord": true,
-  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.profiles.linux": {
     "bash": {
       "path": "bash",
