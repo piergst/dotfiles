@@ -28,4 +28,4 @@ smooth_motion_factor = 0.2
 # block_replace_shape = "underline"
 
 [font]
-size = 16.0
+size = 12.0
