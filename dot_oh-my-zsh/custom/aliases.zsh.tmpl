@@ -4,15 +4,19 @@
 alias e='sudo -E $(echo ~/.local/bin/exegol)'
 {{ end }}
 
+{{/* Specific to local conf, should not be in exegol conf where "zsh_aliases_common" is also used */}}
+
 alias cm='chezmoi'
 alias j='jedha-cli'
 alias pacup='sudo pacman -Suy && yay -Suy'
 alias pa='sudo pacman'
-alias py='python3'
 alias paclean='sudo pacman -Rns (pacman -Qtdq)'
 alias lock='i3lock -t -i ~/Sync/documents/wallpaper/arch.png'
 alias d='sudo docker'
 alias m1='~/.screenlayout/1.sh'
 alias m3='~/.screenlayout/3.sh'
+alias won='nmcli radio wifi on'
+alias woff='nmcli radio wifi off'
+
 
 
