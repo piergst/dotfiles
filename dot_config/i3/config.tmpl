@@ -345,4 +345,5 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # Cursor speed control 
 # Default is 600 25
-exec --no-startup-id xset r rate 200 50
+# exec_always : executed on reload
+exec_always --no-startup-id xset r rate 200 55
