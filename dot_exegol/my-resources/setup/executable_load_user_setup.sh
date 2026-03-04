@@ -14,8 +14,9 @@ install -D /opt/my-resources/setup/zsh/my-theme.omp.json /root/.config/zsh/my-th
 # zsh-history-substring-search
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 
-# zodide
-sudo apt update && sudo apt install -y zoxide ripgrep xclip
+# Ignore apt errors (unsigned repo won't block the rest)
+sudo apt update || true
+sudo apt install -y zoxide ripgrep xclip || true
 
 # eza (pb with apt install retry later)
 /opt/my-resources/setup/install-eza.sh
@@ -28,7 +29,7 @@ cp /opt/my-resources/setup/zsh/aliases /root/.oh-my-zsh/custom/aliases.zsh
 cp /opt/my-resources/setup/zsh/aliases /root/.oh-my-zsh/custom/aliases.zsh
 
 # Init nvim config
-nvim --headless "+Lazy! sync" +qa || true
+nvim --headless '+Lazy! sync' +qa || true
 
 # Custom exegol default plugins
 TARGET_ZSHRC="/root/.zshrc"

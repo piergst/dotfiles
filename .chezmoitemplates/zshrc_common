@@ -26,7 +26,10 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-source $ZSH/oh-my-zsh.sh
+if [[ "$HOSTNAME" != *"exegol"* ]]; then
+  source $ZSH/oh-my-zsh.sh
+fi
+#source $ZSH/oh-my-zsh.sh
 
 
 

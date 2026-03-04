@@ -53,3 +53,7 @@ install -m 0755 "$tmpdir/eza/eza" "$install_dir/eza"
 
 echo -n "Installed: "
 "$install_dir/eza" --version
+
+## Download and install zsh completion
+curl -fsSL "https://raw.githubusercontent.com/eza-community/eza/${tag}/completions/zsh/_eza" \
+  -o /usr/share/zsh/vendor-completions/_eza

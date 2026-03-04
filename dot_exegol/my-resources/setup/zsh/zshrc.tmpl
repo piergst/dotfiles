@@ -3,3 +3,7 @@
 # Force loading custom alias last (to be sure it's the last override)
 source $HOME/.oh-my-zsh/custom/aliases.zsh
 
+# Huntmate terminal hook — always set HUNTMATE_RECORDING so the hook
+# emits OSC markers when sourced inside a huntmate term join session.
+export HUNTMATE_RECORDING=1
+source /opt/my-resources/setup/zsh/huntmate-hook.zsh
