@@ -7,12 +7,10 @@ set -e
 
 # Exegol also features a set of supported customization a user can make.
 # The /opt/supported_setups.md file lists the supported configurations that can be made easily.
-# Oh-my-posh
-curl -s https://ohmyposh.dev/install.sh | bash -s -- -d /root/.local/bin
-install -D /opt/my-resources/setup/zsh/my-theme.omp.json /root/.config/zsh/my-theme.omp.json
 
-# zsh-history-substring-search
+# Completion and prompt
 git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # Ignore apt errors (unsigned repo won't block the rest)
 sudo apt update || true
@@ -24,15 +22,7 @@ sudo apt install -y zoxide ripgrep xclip || true
 # Keybindings
 install -D /opt/my-resources/setup/zsh/keybindings.zsh /root/.oh-my-zsh/custom/keybindings.zsh
 cp /opt/my-resources/setup/zsh/aliases /root/.oh-my-zsh/custom/aliases.zsh
-
-# Aliases (forced in zshrc)
-cp /opt/my-resources/setup/zsh/aliases /root/.oh-my-zsh/custom/aliases.zsh
+#cp /opt/my-resources/setup/zsh/p10k.zsh /root/.p10k.zsh
 
 # Init nvim config
 nvim --headless '+Lazy! sync' +qa || true
-
-# Custom exegol default plugins
-TARGET_ZSHRC="/root/.zshrc"
-
-cp -a "$TARGET_ZSHRC" "${TARGET_ZSHRC}.bak.exegol"
-sed -i -E 's/plugins=\(.*\)$/plugins=(zsh-syntax-highlighting zsh-completions zsh-autosuggestions tmux fzf zsh-nvm)/' "$TARGET_ZSHRC"

@@ -3,3 +3,5 @@
 {{ end }}
 .config/nvim/lazy-lock.json
 .config/nvim/lazyvim.json
+.exegol/my-resources/setup/nvim/lazy-lock.json
+.exegol/my-resources/setup/nvim/lazyvim.json
