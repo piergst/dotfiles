@@ -247,6 +247,12 @@ exec_always --no-startup-id "killall dunst; dunst"
 #assign [class="QtCreator"] 4
 #assign [class="thunderbird"] #2
 
+exec --no-startup-id i3-msg "workspace 1; exec alacritty"
+exec --no-startup-id i3-msg "workspace 6; exec firefox"
+exec --no-startup-id i3-msg "workspace 11; exec discord"
+exec --no-startup-id i3-msg "workspace 12; exec keepassxc; exec thunderbird"
+for_window [workspace="12"] layout tabbed
+
 bindsym $mod+Tab workspace back_and_forth
 
 #exec --no-startup-id i3-msg "workspace 1; exec alacritty; workspace 1"

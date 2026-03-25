@@ -70,5 +70,24 @@
   "terminal.integrated.defaultProfile.osx": "",
   "[css]": {
     "editor.defaultFormatter": "lonefy.vscode-JS-CSS-HTML-formatter"
-  }
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "mkhl.shfmt"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "shellcheck.customArgs": [
+    "-x "
+  ],
+  "redhat.telemetry.enabled": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "continue.enableNextEdit": false,
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.selectedModel": "default"
 }
