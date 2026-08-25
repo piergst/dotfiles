@@ -28,3 +28,8 @@ vim.cmd([[
 
 -- Remap Ctrl+Tab pour alterner avec le dernier buffer
 vim.keymap.set("n", "<C-Tab>", ":e#<CR>")
+
+-- Forcer le path à cwd quand on ouvre un terminal
+vim.keymap.set("n", "<C-_>", function()
+  Snacks.terminal(nil, { cwd = vim.fn.expand("%:p:h") })
+end, { desc = "Terminal (file dir)" })
